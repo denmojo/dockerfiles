@@ -5,7 +5,7 @@
 #    This file describe how to install PostgreSQL with main 
 #    dependencies installed.
 # USAGE:
-#    # Download PostgreSQL 9.4 Dockerfile
+#    # Download this Dockerfile
 #    
 #    # Build PostgreSQL image
 #    docker build -t postgresql-9.4 
