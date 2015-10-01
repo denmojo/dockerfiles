@@ -14,7 +14,7 @@ You can also pull it from Docker Hub:
 
 ## Running
 
-`docker run -p 0.0.0.0:32777:5432 --name=postgres denmojo/debian-postgres`
+`docker run -d --name=postgres -p 0.0.0.0:32777:5432 denmojo/debian-postgres`
 
 This will run the image container exposing machine port 32777 for connections to the database.
 
