@@ -7,7 +7,7 @@ This project builds a Docker image with PostgreSQL 9.4 in Debian Jessie.
   * Docker
 
 ## Building
-  * `docker build [url to raw of this file]`
+  * `docker build [url to raw of the Dockerfile]`
 
 You can also pull it from Docker Hub:
   * `docker pull denmojo/debian-postgres`
