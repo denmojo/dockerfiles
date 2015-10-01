@@ -1,4 +1,4 @@
-# VERSION: 	0.1
+# VERSION: 	0.2
 # DESCRIPTION: 	Create the PostgreSQL 9.4 Databasee in a container 
 # AUTHOR: 	Dennis Mojado (denmojo@gmail.com)
 # COMMENTS: 
@@ -24,7 +24,7 @@ RUN apt-get update -qq && apt-get upgrade -y
 
 RUN apt-get install wget -qq
 
-RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main 9.1" > /etc/apt/sources.list.d/pgdg.list
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main 9.4" > /etc/apt/sources.list.d/pgdg.list
 
 RUN gpg --keyserver keys.gnupg.net --recv-keys ACCC4CF8
 
