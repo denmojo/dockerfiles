@@ -19,3 +19,7 @@ You can also pull it from Docker Hub:
 This will run the image container exposing machine port 32777 for connections to the database.
 
 Default user is `produser` with password `produser` in database `prod_db`.
+
+### NOTE: 
+
+Volumes for this build are not specified, making the database and data portable as a single container. To better support portability and separation of duties, an additional docker volume container can be linked to this and uncomment the volume line in the Dockerfile.
