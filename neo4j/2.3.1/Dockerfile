@@ -24,7 +24,7 @@ WORKDIR /var/lib/neo4j
 RUN mv data /data \
     && ln --symbolic /data
 
-VOLUME /data
+# VOLUME /data
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
