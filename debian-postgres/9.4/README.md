@@ -1,5 +1,6 @@
 debian-postgres 9.4
 =============
+[![](https://images.microbadger.com/badges/image/denmojo/debian-postgres.svg)](https://microbadger.com/images/denmojo/debian-postgres "Get your own image badge on microbadger.com")
 
 This project builds a Docker image with PostgreSQL 9.4 in Debian Jessie.
 
