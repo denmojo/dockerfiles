@@ -1,14 +1,20 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
-RUN apt-get update -q && apt-get -qy install \
-      build-essential pkg-config libc6-dev m4 g++-multilib \
-      autoconf libtool ncurses-dev unzip git python \
-      zlib1g-dev wget bsdmainutils automake zsh
+RUN apt-get update && apt-get install -y --no-install-recommends apt-transport-https ca-certificates wget
 
-WORKDIR /root/
-RUN git clone https://github.com/zcash/zcash.git
-WORKDIR /root/zcash/
-RUN git checkout v1.0.4
-RUN ./zcutil/fetch-params.sh
+RUN wget -O - https://apt.z.cash/zcash.asc | apt-key add -
 
-RUN ./zcutil/build.sh -j$(nproc)
+RUN echo "deb https://apt.z.cash/ jessie main" | tee /etc/apt/sources.list.d/zcash.list
+
+RUN apt-get update && apt-get install -y zcash
+
+RUN zcash-fetch-params
+
+CMD zcashd
+
+# docker build -t zcash
+## e.g. in macOS:
+## create a directory: ~/.zcash 
+## in that directory, touch zcash.config
+## add in there any configurations such as gen=1 to enable CPU mining
+# docker run -v /Users/<whoever>/.zcash:/root/.zcash --name zcashd --rm -ti zcash
