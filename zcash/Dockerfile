@@ -15,6 +15,6 @@ CMD zcashd
 # docker build -t zcash
 ## e.g. in macOS:
 ## create a directory: ~/.zcash 
-## in that directory, touch zcash.config
+## in that directory, touch zcash.conf
 ## add in there any configurations such as gen=1 to enable CPU mining
 # docker run -v /Users/<whoever>/.zcash:/root/.zcash --name zcashd --rm -ti zcash
